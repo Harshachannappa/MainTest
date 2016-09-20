@@ -1,7 +1,7 @@
 Feature: OSIP Regression cases
 
 
-  @TC44383
+  @TC44383 @RegDemo
   Scenario: OSIP-360 View Location - Individual Address_Verify Related Tab - Contacts Add Contact Button
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -14,7 +14,7 @@ Feature: OSIP Regression cases
     Then I validate Add contact button in contacts tab
     And Log out from OMNIVue
     
-     @TC39187
+     @TC39187 @RegDemo
   Scenario: OSIP-Verify the functionality of Create Button for create form -Subscriber
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -25,7 +25,7 @@ Feature: OSIP Regression cases
     And Log out from OMNIVue
     
     
-    @TC39192
+    @TC39192 @RegDemo
      Scenario: Verify the functionality of Create Button for logical port
      Given I am in omnivue url
      When I log in as a "Admin" user
@@ -36,7 +36,7 @@ Feature: OSIP Regression cases
      And I fill the mandatory fields with "TC39192-Logical" data
      
     # Divya Test case
-   @TC39186
+   @TC39186 @RegDemo
   Scenario: Verify QoS Template EDIT button functionality
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -53,7 +53,7 @@ Feature: OSIP Regression cases
     Then I should validate "Success" message
     
        # Divya Test case
-     @TC39186-1
+     @TC39186-1 @RegDemo
   Scenario: Verify QoS Template EDIT button functionality-Negative Scenario
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -72,7 +72,7 @@ Feature: OSIP Regression cases
     
     ###  AUTHOR:           Shivaprasad
     
-@Regression
+@Regression @RegDemo
    Scenario: Validate activation tab  
 	Given I am logged in as a "ValidAdmin" user in Omnivue
 	When I clicked on "Search" tab
@@ -85,7 +85,7 @@ Feature: OSIP Regression cases
    Then Validate the Activations tab with Activation data
    
    
-   @Regression @reg45
+   @Regression @reg45 @RegDemo
   Scenario: Validate fields in Create Device Screen for GPON Splitter
   Given I am logged in as a "ValidAdmin" user in Omnivue
 	When I clicked on "Create" tab
@@ -94,7 +94,7 @@ Feature: OSIP Regression cases
 	And I click on Launch Create Form for "DeviceCreate"
   Then Validate fields in create device page for splitter 
 	
-     @Regression @reg45
+     @Regression @reg45 @RegDemo
  Scenario: Validate Apache SOLR feature for Subscriber Name field in DSL OVC Service create screen 
     Given I am logged in as a "ValidAdmin" user in Omnivue
 	When I clicked on "Create" tab

@@ -26,7 +26,7 @@ public class CukesTest {
 
 @TestEnvironment(Environment.E2E)
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features="src/test/resources/features", tags={"@RegSeptrel"})
+@CucumberOptions(features="src/test/resources/features", tags={"@RegDemo"})
 public class CukesTest {
 	
 	@BeforeClass

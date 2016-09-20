@@ -58,11 +58,13 @@ public class OSIPScreenStepDefinition {
 	}
 	
 	@And("^I click on search button for \"([^\"]*)\"$")			//Search button
-	public void i_clicked_on_search_button(String search_button) throws Exception 
+	public void i_clicked_on_INV_search_button(String button) throws Exception 
 	{
-		enduser.click_searchBtn(search_button);
+		enduser.click_searchBtn(button);
+		//System.out.println("First stage");
 	}
 	
+
 	@And("^I clicked on Advance Search for \"([^\"]*)\"$")
 	public void i_clicked_on_Adcance_Search_for(String advanced_Search) throws Throwable {
 	   // enduser.click_searchBtn(advanced_Search);

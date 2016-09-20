@@ -6,7 +6,7 @@ Given I am in omnivue url
 When I log in as a "Admin" user
 And I clicked on "Search" tab
 And I Search for <Orders> in Search Tab
-And I click on search button for "Orders"
+And I click on search button for Orders
 And I click on view icon of Search Result page
 Then Validate attributes in order details page
 And Log out from OMNIVue
@@ -37,7 +37,7 @@ And I clicked on "Search" tab
 And I Search for the "GPON Order" data from Search Tab
 And I clicked on Advance Search for "Orders"
 And I Search order with DTN
-And I click on search button for "Orders"
+And I click on search button for Orders
 And I click on view icon of Search Result page
 Then Validate attributes in order details page
 And Log out from OMNIVue
