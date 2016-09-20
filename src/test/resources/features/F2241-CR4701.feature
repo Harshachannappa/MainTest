@@ -1,7 +1,7 @@
 Feature: F2241-GPON DSL OVC Inventory Enhancements
 
 #US33620-Display GPON DSL OVCs Associated to Device----Need Test data in Test 1
-@TC18903_TC18905
+@TC18903_TC18905 @RegDemo
    Scenario: Validate OLT Devices display MEF EVC for HSI
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -16,7 +16,7 @@ Feature: F2241-GPON DSL OVC Inventory Enhancements
     #And Log out from OMNIVue
     
     #----Need Test data in Test 1
-@TC18883_TC18902
+@TC18883_TC18902  @RegDemo
    Scenario: Validate OLT Devices display DSL OVC for HSI
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -33,7 +33,7 @@ Feature: F2241-GPON DSL OVC Inventory Enhancements
 #DSLOVC-Test3-LTTOCOEL-01CAB01A
 
 #----Need Test data in Test 1--Also approach needs to be changed it picks on only one set of data wat if we use different data
-@TC19275
+@TC19275  @RegDemo
   Scenario: Validate Refresh functionality of OLT Devices under Service tab
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -50,7 +50,7 @@ Feature: F2241-GPON DSL OVC Inventory Enhancements
     #Then Log out from OMNIVue
     
     #chcek the validation part is it fine line 57
-@TC19068
+@TC19068 @RegDemo
 Scenario: Validate OLT Devices with No service
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -84,7 +84,7 @@ Scenario: Validate OLT Devices with No service
 #DSL OVC-TEST1-LEHIUTMA03W.3122
 #DSL OVC-TEST3-CNBLIAWA02W.2839_2.24  
 
-	@US31642-TC20897-TC20901 @reg33 @TC86316 
+	@US31642-TC20897-TC20901 @reg33 @TC86316 @RegDemo
   Scenario: Validate C Tag Pool multiple ranges can be edited on a non activated subscribers or Pending orders
     Given I am in omnivue url
     When I log in as a "Admin" user

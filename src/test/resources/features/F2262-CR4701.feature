@@ -1,7 +1,7 @@
 Feature: F2262-CR4701-US40860-CR4701-Enhance ICL Device_Compatbility table to accept Passive technology
   
   
-  @US43123-TC24409
+  @US43123-TC24409 @RegDemo
   Scenario Outline: OV- Validating atributes of Create Device Screen on Passive Devices.
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -28,7 +28,7 @@ Feature: F2262-CR4701-US40860-CR4701-Enhance ICL Device_Compatbility table to ac
     #topology Test3-TXNTW7223
     #Topology Test1-CANTW7920
       
-  @US43123-TC24975
+  @US43123-TC24975 @RegDemo
   Scenario Outline: OV-Validating Search Device Screen based on Passive technology type
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -55,7 +55,7 @@ Feature: F2262-CR4701-US40860-CR4701-Enhance ICL Device_Compatbility table to ac
     #Test-3 Data-FDP-BLCYNVXFOSP-FDP72
     #Test-3 Data-Splitter-LSVGNVXH89W-OFS-1
     
-     @US43123-TC25113
+     @US43123-TC25113 @RegDemo
   Scenario: OV- Validating atributes of Create Device Screen on Passive Devices.
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -81,7 +81,7 @@ Feature: F2262-CR4701-US40860-CR4701-Enhance ICL Device_Compatbility table to ac
     
     #US51414-CR4701 GPON Location CLLI is optional for device technology=GPON or Passive
     
-   @US51414-TC37684 @TC86322 @RegSeptrel
+   @US51414-TC37684 @TC86322 @RegSeptrel @RegDemo
   	Scenario: OV-Validate Location CLLI is optional on Inventory Device Create for Passive Technology
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -103,7 +103,7 @@ Feature: F2262-CR4701-US40860-CR4701-Enhance ICL Device_Compatbility table to ac
      #topology Test3-TXNTW7223
     #Topology Test1-CANTW7920
     
-@US51414-TC37479 @TC86321 @RegSeptrel
+@US51414-TC37479 @TC86321 @RegSeptrel @RegDemo
    Scenario: OV-Validate Location CLLI is optional on Inventory Device Create for GPON Technology
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -125,7 +125,7 @@ Feature: F2262-CR4701-US40860-CR4701-Enhance ICL Device_Compatbility table to ac
     #Topology Test1-CANTW7920
     
 
-@US51414-TC37705 @TC86323
+@US51414-TC37705 @TC86323 @RegDemo
     Scenario: OV-Validate Location CLLI attribute is mandatory on Inventory Device Create for Ethernet Technology
     Given I am in omnivue url
     When I log in as a "Admin" user

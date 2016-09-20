@@ -1,6 +1,6 @@
 Feature: F6277-US62403-New OV Order Search is not returning search results for GPON orders
 
-@US62403-TC54941-TC54947-TC54962-TC55177 @reg31  
+@US62403-TC54941-TC54947-TC54962-TC55177 @RegDemo
 Scenario Outline: Validate OV order search return results for GPON using CSOF Order Id
 Given I am in omnivue url
 When I log in as a "Admin" user
@@ -29,7 +29,7 @@ And Log out from OMNIVue
 #Test 3 Data: Customer Name-TEST, VIJAY
 
 
-@US62403-TC55494 @reg31  @REGSept
+@US62403-TC55494 @reg31  @RegDemo
 Scenario: Validate OV order search return results for GPON using DTN in Advanced search
 Given I am in omnivue url
 When I log in as a "Admin" user
