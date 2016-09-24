@@ -140,6 +140,12 @@ public class OVCreateStepDefinition {
 		 devcreatepage.btn_wireclli.click();
 	 }
 	//End of new change--9/23
+	
+	@And("^I launch create form for \"([^\"]*)\"$")
+	public void createform(String type){
+		enduser.createform(type);
+		//actvtnpage.ddl_createType.selectByVisibleText(type);
+	 }
 
 	// Network Build Device Creation--Sairam
 		
@@ -153,7 +159,7 @@ public class OVCreateStepDefinition {
 	public void gpon_field_fill(){
 		enduser.gpon_fill_field();
 	}
-				
-		
+
+			
 		
 }
