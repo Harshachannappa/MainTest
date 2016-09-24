@@ -1,6 +1,6 @@
 Feature: F2241-GPON DSL OVC Inventory Enhancements
 
-#US33620-Display GPON DSL OVCs Associated to Device----Need Test data in Test 1
+#US33620-Display GPON DSL OVCs Associated to Device
 @TC18903_TC18905 @RegDemo
    Scenario: Validate OLT Devices display MEF EVC for HSI
     Given I am in omnivue url
@@ -32,7 +32,7 @@ Feature: F2241-GPON DSL OVC Inventory Enhancements
 #DSLOVC-Test1-OLTDS301-OLT-103683
 #DSLOVC-Test3-LTTOCOEL-01CAB01A
 
-#----Need Test data in Test 1--Also approach needs to be changed it picks on only one set of data wat if we use different data
+
 @TC19275  @RegDemo
   Scenario: Validate Refresh functionality of OLT Devices under Service tab
     Given I am in omnivue url
@@ -47,21 +47,21 @@ Feature: F2241-GPON DSL OVC Inventory Enhancements
     And I modify the service name from 77/L1XX/785391//CTQF to 77/L1XX/785391//ADCD
     And I do Refresh      
     Then I should see the updated Associated service name 
-    #Then Log out from OMNIVue
+   
     
-    #chcek the validation part is it fine line 57
+ 
 @TC19068 @RegDemo
 Scenario: Validate OLT Devices with No service
     Given I am in omnivue url
     When I log in as a "Admin" user
-    #And I goto Activation Page
+  
     And I clicked on "Search" tab 
     And I Search for the "OLT-No Service" data from Search Tab
     And I click on search button for "Inventory"
     And I click on view icon of Search Result page
     And I verified view page and clicked on "Services" tab
     Then validate the Service Tab
-   # And Log out from OMNIVue
+
     
 ########################################################################################################################
 #US31642-GPON SVLAN C Tag Pool Display, Create and Update and C Tag Status Display

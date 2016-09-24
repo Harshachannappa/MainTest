@@ -9,7 +9,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.thucydides.core.annotations.Steps;
 
-public class OVUsabilityStepDefinition {
+public class OVValidationStepDefinition {
 
 	@Steps
 	UserSteps enduser;
@@ -180,4 +180,62 @@ public class OVUsabilityStepDefinition {
 		enduser.validate_apacheSolr_for_subscriber_in_create_device_service_page_enduser();
 		
 	}
+	
+	//New update 9/23/
+	@Then("^I validate \"([^\"]*)\" data in the Device Detail Page$")
+	public void i_should_validate_data_in_the_Device_Detail_Page(String template) throws Throwable {
+		Thread.sleep(3000);
+		enduser.validateDeviceDetail(template);
+		Thread.sleep(10000);
+	    
+	}
+	
+	@Then("^I validate \"([^\"]*)\" data in the Network Detail Page$")
+	public void i_should_validate_data_in_the_Network_Detail_Page(String template) throws Throwable {
+		Thread.sleep(3000);
+		enduser.validateNetworkDetail(template);
+		Thread.sleep(10000);
+	    
+	}
+	
+	@Then("I should see the start and end devices$")
+	public void Then_I_should_see_the_start_and_end_devices() throws InterruptedException{
+		enduser.validate_DeviceName();
+	}
+	
+	@Then("^I should be in the \"([^\"]*)\" list view page$")
+	public void i_should_be_in_the_list_view_page(String template) throws Throwable {
+		Thread.sleep(3000);
+		enduser.validateViewList(template);
+		Thread.sleep(10000);
+	    
+	}
+	
+	@Then("^I verify subscriber lookup page$")
+	public void i_click_on_Add_Subscribers_button_and_verify_subscriber_lookup_page() throws Throwable {
+		//actvtnpage.btn_addSubscriber.click();
+		enduser.validate_lookupPage();
+	}
+	
+	@And("^I verified all fields in device details page$")
+	 public void verifyDeviceDetailsField(){
+		 enduser.verifyDeviceDetailsField();	 
+	 }
+	
+	 @Then("^I verified all fields in networking details page$")
+	 public void verifyNetworkingDetailsField(){
+		 enduser.verifyNetworkingDetailsField();
+		 
+	 }
+	 
+	 @Then("^I verified all fields of wire center CLLI lookup$")
+	 public void verifywirecenterCLLILookupFields() throws InterruptedException{
+		 enduser.verifywirecenterCLLILookupFields();
+	 }
+	 
+	 @Then("I verified \"([^\"]*)\" Details page$")
+		public void verfiy_relatedTabPage(String tab) throws Exception{
+			enduser.verfiy_relatedTabPage(tab);
+		}
+	
 }

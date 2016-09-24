@@ -81,7 +81,7 @@ Feature: F2262-CR4701-US40860-CR4701-Enhance ICL Device_Compatbility table to ac
     
     #US51414-CR4701 GPON Location CLLI is optional for device technology=GPON or Passive
     
-   @US51414-TC37684 @TC86322 @RegSeptrel @RegDemo
+   @US51414-TC37684 @TC86322 @RegDemo
   	Scenario: OV-Validate Location CLLI is optional on Inventory Device Create for Passive Technology
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -103,7 +103,7 @@ Feature: F2262-CR4701-US40860-CR4701-Enhance ICL Device_Compatbility table to ac
      #topology Test3-TXNTW7223
     #Topology Test1-CANTW7920
     
-@US51414-TC37479 @TC86321 @RegSeptrel @RegDemo
+@US51414-TC37479 @TC86321 @RegDemo
    Scenario: OV-Validate Location CLLI is optional on Inventory Device Create for GPON Technology
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -133,13 +133,13 @@ Feature: F2262-CR4701-US40860-CR4701-Enhance ICL Device_Compatbility table to ac
     And I clicked on "Create" tab
     And I go to "Inventory" type and select "Device"
     And I Select "Technology" as Filter By value
-    When I validated "ETHERNET" technology and device type
-    Then Select the technology as "ETHERNET" with Device Type as "Calix C Series" with Sub-Type as "Calix C7"
-    Then Validate "ETHERNET" radio button in device create page 
+    And I validated "ETHERNET" technology and device type
+    And Select the technology as "ETHERNET" with Device Type as "Calix C Series" with Sub-Type as "Calix C7"
+    And Validate "ETHERNET" radio button in device create page 
     #Then Validate Location CLLI is optional or not
-    Then Validate Location CLLI
+    And Validate Location CLLI
     And Select subscriber & Equipment role with "US51414-TC37705" data
-    And I fill the mandatory fields with "US51414-TC37705" data
+    Then I fill the mandatory fields with "US51414-TC37705" data
     #And I click on Create button
     #And Device got successfully created-
     

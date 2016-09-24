@@ -24,9 +24,9 @@ public class CukesTest {
 	}
 } */ //TC44383,,,US43123-TC24409
 
-@TestEnvironment(Environment.E2E)
+@TestEnvironment(Environment.INT1)
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features="src/test/resources/features", tags={"@RegDemo"})
+@CucumberOptions(features="src/test/resources/features", tags={"@regprathim"})
 public class CukesTest {
 	
 	@BeforeClass

@@ -7,7 +7,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.And;
 import net.thucydides.core.annotations.Steps;
 
-public class OSIPScreenStepDefinition {
+public class OVSearchStepDefinition {
 	
 	@Steps
 	UserSteps enduser;
@@ -178,6 +178,13 @@ public class OSIPScreenStepDefinition {
 	    // Write code here that turns the phrase above into concrete actions
 		enduser.i_Select_for_the_drop_down_Service_Type_us(service_type);
 	}
+	
+	@And("^I clicked Networking Details Tab$") //Fill the Device create form page details
+	public void clickedNetworkingDetailsTab(){
+		enduser.clickedNetworkingDetailsTab();		
+	}
+	
+	
 	
 	/* ******************Network Create Form ************ */
 	

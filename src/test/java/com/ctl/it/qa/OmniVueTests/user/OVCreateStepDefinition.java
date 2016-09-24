@@ -98,6 +98,48 @@ public class OVCreateStepDefinition {
 		
 	}	
 	
+	//New Updates---9/23/2016
+	@And("^I clicked the \"([^\"]*)\" button in Device Detail Page$")
+	public void edit_Button_DeviceDetailPage(String button) throws InterruptedException{
+		enduser.edit_Button_DeviceDetailPage(button);
+	}
+	
+	@And("^I edit the enabled fields with \"([^\"]*)\" data in Device Detail Tab$")
+	public void fillenabledfield(String testdata){
+		enduser.fillenabledfield(testdata);		
+	}
+	
+	@And("^I clicked the save button in Networking Details Tab$") 
+	public void saveNetworkingDetails() throws InterruptedException{
+		enduser.saveNetworkingDetails();		
+	}
+	
+	
+	@And("^I clicked the \"([^\"]*)\" button in Networking Details Tab$")
+	public void edit_Button_NetworkingDetailPage(String button) throws InterruptedException{
+		enduser.edit_Button_NetworkingDetailPage(button);
+	}
+	
+	@And("^I edit the enabled fields with \"([^\"]*)\" data in Networking Details Tab$") //Fill the Device create form page details
+	public void networkDetailUpdatefield(String testdata) throws InterruptedException{
+		enduser.fill_fields(testdata);
+	}
+	
+	@And("^I fill the madatory fields for subscriber with \"([^\"]*)\" data$")
+	 public void fillSubscriberFields(String data) throws InterruptedException{
+		 enduser.fillSubscriberFields(data);
+	 }
+	
+	@And("^I edit the enabled fields with \"([^\"]*)\" data$")
+	public void editEnableField(String testdata) throws InterruptedException{
+		enduser.fill_fields(testdata);
+	}
+	
+	@And("^I click on wirecenterCLLI search button$")
+	 public void clickwirecenterCLLISearchButton(){
+		 devcreatepage.btn_wireclli.click();
+	 }
+	//End of new change--9/23
 
 	// Network Build Device Creation--Sairam
 		
