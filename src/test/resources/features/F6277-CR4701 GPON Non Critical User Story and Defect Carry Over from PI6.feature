@@ -29,7 +29,7 @@ And Log out from OMNIVue
 #Test 3 Data: Customer Name-TEST, VIJAY
 
 
-@US62403-TC55494 @reg31  @RegDemo
+@US62403-TC55494 @RegDemo
 Scenario: Validate OV order search return results for GPON using DTN in Advanced search
 Given I am in omnivue url
 When I log in as a "Admin" user

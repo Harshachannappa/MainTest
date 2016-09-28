@@ -1,7 +1,7 @@
 Feature: User can view BAM events tab on Order - GPON and it display captured events
 
 #OV - Display Order BAM Report (Lifecycle Events)
-@US56683 @TC53577 @reg @RegDemo
+@US56683 @TC53577 @RegDemo
 Scenario: OV – validate BAM Reports logs displayed on GPON orders for HSI orders
 	Given I am logged in as a "ValidAdmin" user in Omnivue
 	When I clicked on "Search" tab
@@ -14,7 +14,7 @@ Scenario: OV – validate BAM Reports logs displayed on GPON orders for HSI orde
 	  #BAM Report Test3-602836
     #BAM Report Test1-612116
 	
-@US56683 @TC53577 @reg @RegDemo
+@US56683 @TC53577 @RegDemo
 Scenario: OV – validate BAM Reports logs displayed on GPON orders for IPTV orders
 	Given I am logged in as a "ValidAdmin" user in Omnivue
 	When I clicked on "Search" tab
@@ -27,7 +27,7 @@ Scenario: OV – validate BAM Reports logs displayed on GPON orders for IPTV ord
 		  #BAM Report Test3-615629
     #BAM Report Test1-615018
    
- @US56683 @TC86566 @RegDemo
+ @US56683 @TC86566
  Scenario: OV - Validate BAM Report logs on Orders for GPON where no data is available
 	Given I am logged in as a "ValidAdmin" user in Omnivue
 	When I clicked on "Search" tab
@@ -44,7 +44,7 @@ Scenario: OV – validate BAM Reports logs displayed on GPON orders for IPTV ord
 	###############################################################################################
 	
 #OV - Display Service BAM Report (Lifecycle Events)
-@US56682 @TC52783 @reg @RegDemo
+@US56682 @TC52783 @RegDemo
 Scenario: OV – validate BAM Reports logs displayed on GPON orders for HSI Service
 	Given I am logged in as a "ValidAdmin" user in Omnivue
 	When I clicked on "Search" tab
@@ -57,7 +57,7 @@ Scenario: OV – validate BAM Reports logs displayed on GPON orders for HSI Serv
 		  #BAM Report Test3-1000005799-HSI
     #BAM Report Test1-1000005133-HSI
 	
-@US56682 @TC52783 @reg @RegDemo
+@US56682 @TC52783
 	Scenario: OV – validate BAM Reports logs displayed on GPON orders for IPTV Service
 	Given I am logged in as a "ValidAdmin" user in Omnivue
 	When I clicked on "Search" tab
@@ -85,7 +85,7 @@ Scenario: OV - Validate Refresh button of BAM Table
 	Then I should see BAM event logs displayed.
 	
 	
-	@US79810  @reg @TC81597 
+	@US79810 @TC81597 
 Scenario: OV – validate BAM Reports logs displayed on GPON orders for HSI Service
 	Given I am logged in as a "ValidAdmin" user in Omnivue
 	When I clicked on "Search" tab

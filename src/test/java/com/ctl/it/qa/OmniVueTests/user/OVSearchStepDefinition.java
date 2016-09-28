@@ -92,8 +92,14 @@ public class OVSearchStepDefinition {
 
 	}
 	
-	
+	@And("^I validate attributes in create form for \"([^\"]*)\"$")
+	public void i_validate_attributes_create_form(String type) throws Exception {
+		Thread.sleep(5000);
+		enduser.Validate_attribute_createform(type);
+		
+		
 
+	}
 
 	//End of Search Button items ****************************************************************
 	

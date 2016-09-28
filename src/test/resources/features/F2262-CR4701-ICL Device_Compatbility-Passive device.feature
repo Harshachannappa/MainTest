@@ -4,21 +4,14 @@ Feature: F2262-CR4701-US40860-CR4701-Enhance ICL Device_Compatbility table to ac
   @US43123-TC24409 @RegDemo
   Scenario Outline: OV- Validating atributes of Create Device Screen on Passive Devices.
     Given I am in omnivue url
-    When I log in as a "Admin" user
-    #When I goto Activation Page
+    When I log in as a "Admin" user    
     And I clicked on "Create" tab
     And I go to "Inventory" type and select "Device"
     And I Select "Technology" as Filter By value
-    And I validated "PASSIVE" technology and device type
-     #--------------------------------Validate create form attribute
-    And Select Device Type as <Device> with Sub-Type as <Subtype>
-    #And I click on Create button
-    #And Search for the  location "Without" Building CLLI
+    And I validated "PASSIVE" technology and device type    
+    And Select Device Type as <Device> with Sub-Type as <Subtype>   
     Then Fill all the mandatory fields with <Data> data
-    #And I click on Create button
-    #And Device got successfully created-
-    #And Log out from OMNIVue
-    
+       
      Examples: 
       | Device                           | Subtype               |Data							|
       | Fiber Distribution Hub           | Generic FDH 144       |US43123-TC24409-1	|
@@ -31,8 +24,7 @@ Feature: F2262-CR4701-US40860-CR4701-Enhance ICL Device_Compatbility table to ac
   @US43123-TC24975 @RegDemo
   Scenario Outline: OV-Validating Search Device Screen based on Passive technology type
     Given I am in omnivue url
-    When I log in as a "Admin" user
-    #When I goto Activation Page
+    When I log in as a "Admin" user   
     And I clicked on "Search" tab
     And I searched for <Container>
     And I click on search button for "Inventory"
@@ -58,19 +50,14 @@ Feature: F2262-CR4701-US40860-CR4701-Enhance ICL Device_Compatbility table to ac
      @US43123-TC25113 @RegDemo
   Scenario: OV- Validating atributes of Create Device Screen on Passive Devices.
     Given I am in omnivue url
-    When I log in as a "Admin" user
-    #When I goto Activation Page
+    When I log in as a "Admin" user    
     And I clicked on "Create" tab
-    And I go to "Inventory" type and select "Device"
-    #And I Select "Technology" as Filter By value
+    And I go to "Inventory" type and select "Device"   
     And I Select "Role" as Filter By value
     And Select the Role as "MST" with Device Type as "Fiber Multiport Service Terminal" with Sub-Type as "Generic MST 2:2"
-    And I validated "PASSIVE" radio button and "All" radio button
-    #Fill the fields step needs to be added
-    #And I click on Create button
+    And I validated "PASSIVE" radio button and "All" radio button   
     And I fill the mandatory fields with "US43123-TC25113" data    
-    Then Validate attributes in "PASSIVE" device details page
-    #And Device got successfully created-
+    Then Validate attributes in "PASSIVE" device details page  
     
      #topology Test3-TXNTW7223
     #Topology Test1-CANTW7920
@@ -84,21 +71,16 @@ Feature: F2262-CR4701-US40860-CR4701-Enhance ICL Device_Compatbility table to ac
    @US51414-TC37684 @TC86322 @RegDemo
   	Scenario: OV-Validate Location CLLI is optional on Inventory Device Create for Passive Technology
     Given I am in omnivue url
-    When I log in as a "Admin" user
-    #When I goto Activation Page
+    When I log in as a "Admin" user   
     And I clicked on "Create" tab
     And I go to "Inventory" type and select "Device"
     And I Select "Technology" as Filter By value
     And I validated "PASSIVE" technology and device type
     And Select the technology as "PASSIVE" with Device Type as "Fiber Distribution Hub" with Sub-Type as "Generic FDH 144"
-    And Validate "PASSIVE" radio button in device create page 
-    #Then Validate Location CLLI is optional or not    
-    #Then Validate Location CLLI for
+    And Validate "PASSIVE" radio button in device create page    
     And Validate Location CLLI
     Then I fill the mandatory fields with "US51414-TC37684" data
-    #Then Validate Location CLLI
-    #And I click on Create button
-    #And Device got successfully created-
+  
     
      #topology Test3-TXNTW7223
     #Topology Test1-CANTW7920
@@ -106,20 +88,15 @@ Feature: F2262-CR4701-US40860-CR4701-Enhance ICL Device_Compatbility table to ac
 @US51414-TC37479 @TC86321 @RegDemo
    Scenario: OV-Validate Location CLLI is optional on Inventory Device Create for GPON Technology
     Given I am in omnivue url
-    When I log in as a "Admin" user
-    #When I goto Activation Page
+    When I log in as a "Admin" user    
     And I clicked on "Create" tab
     And I go to "Inventory" type and select "Device"
     And I Select "Technology" as Filter By value
     And I validated "GPON" technology and device type
     And Select the technology as "GPON" with Device Type as "ADTRAN Total Access 5000" with Sub-Type as "ADTRAN Total Access 5000 19 Inch Chassis"
-    And Validate "GPON" radio button in device create page 
-    #Then Validate Location CLLI is optional or not
+    And Validate "GPON" radio button in device create page    
     And Validate Location CLLI
-    Then I fill the mandatory fields with "US51414-TC37479" data
-    
-    #And I click on Create button
-    #And Device got successfully created-
+    Then I fill the mandatory fields with "US51414-TC37479" data    
     
      #topology Test3-TXNTW7223
     #Topology Test1-CANTW7920
@@ -128,18 +105,14 @@ Feature: F2262-CR4701-US40860-CR4701-Enhance ICL Device_Compatbility table to ac
 @US51414-TC37705 @TC86323 @RegDemo
     Scenario: OV-Validate Location CLLI attribute is mandatory on Inventory Device Create for Ethernet Technology
     Given I am in omnivue url
-    When I log in as a "Admin" user
-    #When I goto Activation Page
+    When I log in as a "Admin" user    
     And I clicked on "Create" tab
     And I go to "Inventory" type and select "Device"
     And I Select "Technology" as Filter By value
     And I validated "ETHERNET" technology and device type
     And Select the technology as "ETHERNET" with Device Type as "Calix C Series" with Sub-Type as "Calix C7"
-    And Validate "ETHERNET" radio button in device create page 
-    #Then Validate Location CLLI is optional or not
+    And Validate "ETHERNET" radio button in device create page     
     And Validate Location CLLI
     And Select subscriber & Equipment role with "US51414-TC37705" data
-    Then I fill the mandatory fields with "US51414-TC37705" data
-    #And I click on Create button
-    #And Device got successfully created-
+    Then I fill the mandatory fields with "US51414-TC37705" data    
     

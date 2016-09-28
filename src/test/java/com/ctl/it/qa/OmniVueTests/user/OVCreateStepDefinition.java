@@ -143,7 +143,8 @@ public class OVCreateStepDefinition {
 	
 	@And("^I launch create form for \"([^\"]*)\"$")
 	public void createform(String type){
-		enduser.createform(type);
+		actvtnpage.ddl_createType.selectByVisibleText(type);
+		enduser.click_createlaunchformbutton();
 		//actvtnpage.ddl_createType.selectByVisibleText(type);
 	 }
 
