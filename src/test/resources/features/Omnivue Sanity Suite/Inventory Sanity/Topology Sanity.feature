@@ -1,13 +1,13 @@
 Feature: Omnivue Sanity Check Topology
 
- @Sanity
+ @Sanity @all
   Scenario Outline: OV-Validating Search Topology based on types
     Given I am in omnivue url
     When I log in as a "Admin" user   
     And I clicked on "Search" tab
     And I searched for <Container>
     And I click on search button for "Inventory"
-    Then I click on view icon of Search Result page
+    Then I click on view icon in Search Result page
         
     Examples: 
     |Container											|
@@ -15,7 +15,7 @@ Feature: Omnivue Sanity Check Topology
     |PON Network-Sanity search			|
 
 
- @Sanity1
+ @Sanity @all
   Scenario: Verify Create Topology functionality for PON Network
    Given I am logged in as a "ValidAdmin" user in Omnivue
 	When I clicked on "Create" tab
@@ -26,7 +26,7 @@ Feature: Omnivue Sanity Check Topology
     Then I Click on "Create" in the Topology Detail Page
     
     
-     @Sanity1
+     @Sanity @all
   Scenario: Verify Create Topology functionality for Generic Network
    Given I am logged in as a "ValidAdmin" user in Omnivue
 	When I clicked on "Create" tab

@@ -1,7 +1,7 @@
 Feature: Omnivue Service Sanity Check
 
     
-  @Sanity @Test54
+  @Sanity @all
   Scenario Outline: Search & Launch Services
     Given I am logged in as a "ValidAdmin" user in Omnivue   
     When I clicked on "Search" tab

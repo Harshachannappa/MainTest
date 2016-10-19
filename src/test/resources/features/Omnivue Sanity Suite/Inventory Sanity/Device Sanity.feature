@@ -1,13 +1,13 @@
 Feature: Omnivue Sanity Check Device
 	
-	  @Sanity
+	  @Sanity @all
   Scenario Outline: OV-Validating Search Device Screen based on technology type
     Given I am in omnivue url
     When I log in as a "Admin" user   
     And I clicked on "Search" tab
     And I searched for <Container>
     And I click on search button for "Inventory"
-    Then I click on view icon of Search Result page
+    Then I click on view icon in Search Result page
         
     Examples: 
     |Container							|
@@ -17,7 +17,7 @@ Feature: Omnivue Sanity Check Device
     
 	
 	
-@Sanity1
+@Sanity @all
 Scenario: Omnivue sanity check for Creating GPON device
 Given I am logged in as a "ValidAdmin" user in Omnivue
 	When I clicked on "Create" tab   
@@ -30,7 +30,7 @@ Given I am logged in as a "ValidAdmin" user in Omnivue
       #topology Test3-TXNTW7223
     #Topology Test1-CANTW7920
 
-@Sanity1
+@Sanity @all
 Scenario: Omnivue sanity check for Creating Passive device
 Given I am logged in as a "ValidAdmin" user in Omnivue
 	When I clicked on "Create" tab    
@@ -43,7 +43,7 @@ Given I am logged in as a "ValidAdmin" user in Omnivue
       #topology Test3-TXNTW7223
     #Topology Test1-CANTW7920
     
-@Sanity1
+@Sanity @all
 Scenario: Omnivue sanity check for Creating Ethernet device
 Given I am logged in as a "ValidAdmin" user in Omnivue
 	When I clicked on "Create" tab    

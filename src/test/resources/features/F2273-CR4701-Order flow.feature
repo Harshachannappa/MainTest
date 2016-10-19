@@ -1,6 +1,6 @@
 Feature: US39146-Create ONT
 
-  @US40972-TC23914 @RegDemo
+  @US40972-TC23914 @RegDemo @all
   Scenario: OV- Validate changed mandatory attributes of ONT device from Inventory
     Given I am in omnivue url
     When I log in as a "Admin" user   

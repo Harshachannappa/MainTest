@@ -2,14 +2,14 @@ Feature: CR4701 GPON Market Launch Test Orders (MLTO) JulyUS65043
 
 #US65043--CR4701 GPON MLTO uses DSP provisioning flow for MLTO and HSI (HSI+PRISM)
 
-@US65043 @TC83402 
+@US65043 @TC83402 @all
   Scenario: OV-Validate GPON MLTO Attribute Validation
     Given I am logged in as a "ValidAdmin" user in Omnivue
     When I clicked on "Create" tab
     And I select "Orders" in Create Tab     
    Then I validate attributes in create form for "MLTO" 
   
-  @US65043 @TC83402 
+  @US65043 @TC83402 @all
   Scenario: OV-Validate GPON MLTO for HSI Service Type
     Given I am logged in as a "ValidAdmin" user in Omnivue
     When I clicked on "Create" tab
@@ -17,7 +17,7 @@ Feature: CR4701 GPON Market Launch Test Orders (MLTO) JulyUS65043
     And I fill all the fields in Order with "HSI-MLTO data" 
     Then I Click on the Create Button in Order Details page
   
-   @US65043 @TC83425
+   @US65043 @TC83425 @all
   Scenario: OV-Validate GPON MLTO for HSI+PRISM Service Type
     Given I am logged in as a "ValidAdmin" user in Omnivue
     When I clicked on "Create" tab
@@ -29,7 +29,7 @@ Feature: CR4701 GPON Market Launch Test Orders (MLTO) JulyUS65043
     
     #US60114--CR4701 GPON MLTO does not require V and H Coordinates
     
-    @US60114 @TC81783
+    @US60114 @TC81783 @all
     Scenario: OV-Validate V and H coordinates is not present in create MLTO form 
     Given I am logged in as a "ValidAdmin" user in Omnivue
     When I clicked on "Create" tab
@@ -37,7 +37,7 @@ Feature: CR4701 GPON Market Launch Test Orders (MLTO) JulyUS65043
    Then I validate "V and H coordinates" attributes in create form for "MLTO" 
     
     
-    @US60114 @TC81783 @Testred
+    @US60114 @TC81783 @all
     Scenario Outline: OV-Validate V and H coordinates is not present in MLTO Search form 
     Given I am logged in as a "ValidAdmin" user in Omnivue
     When I clicked on "Search" tab         
@@ -59,7 +59,9 @@ Feature: CR4701 GPON Market Launch Test Orders (MLTO) JulyUS65043
 #Order no. 646494 (HSI)
 #Order no: 638772 (HIS+PRISM)
    
-   @US60114 @TC81783
+   
+   #pending
+   @US60114 @TC81783 
     Scenario: OV-Validate V and H coordinates is not present in MLTO Edit form 
     Given I am logged in as a "ValidAdmin" user in Omnivue
      Given I am logged in as a "ValidAdmin" user in Omnivue

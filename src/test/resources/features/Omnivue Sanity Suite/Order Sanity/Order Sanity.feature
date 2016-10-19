@@ -1,6 +1,6 @@
 Feature: Omnivue Order Sanity Check
 
- @Sanity
+ @Sanity @all
   Scenario Outline: OV-Validating Order Search based on types
     Given I am in omnivue url
     When I log in as a "Admin" user   

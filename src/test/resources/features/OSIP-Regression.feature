@@ -1,7 +1,7 @@
 Feature: OSIP Regression cases
 
 
-  @TC44383 
+  @TC44383  @OSIPRegression @all
   Scenario: OSIP-360 View Location - Individual Address_Verify Related Tab - Contacts Add Contact Button
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -14,7 +14,7 @@ Feature: OSIP Regression cases
     Then I validate Add contact button in contacts tab
     
     
-     @TC39187 
+     @TC39187   @OSIPRegression @all
   Scenario: OSIP-Verify the functionality of Create Button for create form -Subscriber
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -25,7 +25,7 @@ Feature: OSIP Regression cases
    
     
     
-    @TC39192
+    @TC39192  @OSIPRegression @all
      Scenario: Verify the functionality of Create Button for logical port
      Given I am in omnivue url
      When I log in as a "Admin" user
@@ -36,7 +36,7 @@ Feature: OSIP Regression cases
      Then I fill the mandatory fields with "TC39192-Logical" data
      
  
-   @TC39186 
+   @TC39186  @OSIPRegression @all
   Scenario: Verify QoS Template EDIT button functionality
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -53,7 +53,7 @@ Feature: OSIP Regression cases
     Then I should validate "Success" message
     
        # Divya Test case
-     @TC39186-1
+     @TC39186-1  @OSIPRegression @all
   Scenario: Verify QoS Template EDIT button functionality-Negative Scenario
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -72,20 +72,19 @@ Feature: OSIP Regression cases
     
     ###  AUTHOR:           Shivaprasad
     
-@Regression
+@Regression  @OSIPRegression @all
    Scenario: Validate activation tab  
 	Given I am logged in as a "ValidAdmin" user in Omnivue
 	When I clicked on "Search" tab
 	 And I Search for the "Search Service" data from Search Tab 
     And I click on search button for "Inventory"
     And I click on view icon in Search Result page
-    And In the 360 view I click on the "Activations" tab
-    #And I verified view page and clicked on "Activations" tab
+    And In the 360 view I click on the "Activations" tab  
     And I clicked on expand icon of Related tab "Activations" page
    Then Validate the Activations tab with Activation data
    
    
-   @Regression
+   @Regression  @OSIPRegression @all
   Scenario: Validate fields in Create Device Screen for GPON Splitter
   Given I am logged in as a "ValidAdmin" user in Omnivue
 	When I clicked on "Create" tab
@@ -94,7 +93,7 @@ Feature: OSIP Regression cases
 	And I click on Launch Create Form for "DeviceCreate"
   Then Validate fields in create device page for splitter 
 	
-     @Regression 
+     @OSIPRegression @all
  Scenario: Validate Apache SOLR feature for Subscriber Name field in DSL OVC Service create screen 
     Given I am logged in as a "ValidAdmin" user in Omnivue
 	When I clicked on "Create" tab
@@ -110,10 +109,9 @@ Feature: OSIP Regression cases
    ##																																						######
    ##																																						######
    ###################################################################################
+ 
    
-   ## Author: Dolly
-   
-  @TC55536 @regprathim @regtesthar
+  @TC55536 @regprathim @all
   Scenario: Verify the create functionality of GPON device type FDH
     Given I am logged in as a "ValidAdmin" user in Omnivue
     When I clicked on "Create" tab
@@ -130,7 +128,7 @@ Feature: OSIP Regression cases
     And I clicked the save button in Networking Details Tab
     Then I validate "Network Information" data in the Network Detail Page
 
-  @TC55537 @regprathim
+  @TC55537 @regprathim @all
   Scenario: Verify the create functionality of GPON device type ONT
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -148,7 +146,7 @@ Feature: OSIP Regression cases
     And I clicked the "Save" button in Networking Details Tab
     Then I validate "Network Information" data in the Network Detail Page
 
-  @TC39203 @regprathim
+  @TC39203 @regprathim @all
   Scenario: Related Systems Devices_Verify Start and End Device tabs are displayed for an IPTV service
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -159,7 +157,7 @@ Feature: OSIP Regression cases
     And I verified view page and clicked on "Devices" tab
     Then I should see the start and end devices
 
-  @TC39207 @regprathim
+  @TC39207 @regprathim @all
   Scenario: List View(QoS Template)_Verify QoS Template list view is displayed when search is performed
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -169,7 +167,7 @@ Feature: OSIP Regression cases
     And I click on view icon in Search Result page
     Then I should be in the "QOS Template" list view page
     
-      @TC55531
+      @TC55531 @all @regprathim
   Scenario: Verify the create functionality of GPON device type OLT
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -187,7 +185,7 @@ Feature: OSIP Regression cases
     And I clicked the save button in Networking Details Tab
     Then I validate "Network Information" data in the Network Detail Page
     
-      @TC55534
+      @TC55534 @all @regprathim
   Scenario: Verify the create functionality of GPON device type MDU
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -205,7 +203,7 @@ Feature: OSIP Regression cases
     And I clicked the save button in Networking Details Tab
     Then I validate "Network Information" data in the Network Detail Page
     
-      @TC55701 @regprathim
+      @TC55701 @regprathim @all
   Scenario: Verify the create functionality of Transport Path
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -217,7 +215,7 @@ Feature: OSIP Regression cases
     And I validate "101/GE1/OREMUTMA05W/OREMUTTC00W" device name along with the end device name
     Then I validate the submit button as enabled and click on it
     
-      @TC54960 @regprathim
+      @TC54960 @regprathim @all
   Scenario: Verify Create Topology functionality for PON Collector
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -232,15 +230,11 @@ Feature: OSIP Regression cases
     And I search Device Type as "Calix C Series" with Device SubType as "Calix C7"
     Then I validate "TopologyData" data in the Topology Detail Page
     
-    ##########################################################################################################################
-
-  #author Mohit
-  @TC39221 @regprathim
+ 
+  @TC39221 @regprathim @all
   Scenario: Verify Add Subscribers button
     Given I am in omnivue url
     When I log in as a "Admin" user
-    #new
-    #And I verified "Search" dropdown tab is present
     And I clicked on "Search" tab
     And I Search for the "TC39221" data from Search Tab
     And I click on search button for "Inventory"
@@ -249,7 +243,7 @@ Feature: OSIP Regression cases
     And I click on "Add Subscribers"
     Then I verify subscriber lookup page
 
-  @TC39263 @regprathim
+  @TC39263 @regprathim @all
   Scenario: Verify BAM Reports for the 360 view_Orders
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -260,7 +254,7 @@ Feature: OSIP Regression cases
     And In the 360 view I click on the "BAM Report" tab
     Then I should see BAM event logs displayed.
 
-  @TC55484 @regprathim
+  @TC55484 @regprathim @all
   Scenario: Verify the create functionality of GPON device type MDU
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -282,7 +276,7 @@ Feature: OSIP Regression cases
     Then I verified all fields in networking details page
   #Needs some rework to merge with others
   
-  @TC39242 @regprathim
+  @TC39242 @regprathim @all
   Scenario: Verify the create functionality of GPON device type MDU
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -293,7 +287,7 @@ Feature: OSIP Regression cases
     And I click on wirecenterCLLI search button
     Then I verified all fields of wire center CLLI lookup
 
-  @TC55671 @regprathim
+  @TC55671 @regprathim @all
   Scenario: Verify data displayed in the related tabs for GPON devices
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -308,7 +302,7 @@ Feature: OSIP Regression cases
     And In the 360 view I click on the "Circuits" tab
     Then I verified "Circuits" Details page
 
-  @TC55673 @regprathim
+  @TC55673 @regprathim @all
   Scenario: Verify data displayed in the related tabs for GPON devices
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -323,7 +317,7 @@ Feature: OSIP Regression cases
     And In the 360 view I click on the "Devices" tab
     Then I verified "Devices" Details page
 
-  @TC55535 @regprathim
+  @TC55535 @regprathim @all
   Scenario: Verify the create functionality of GPON device type MST
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -343,8 +337,8 @@ Feature: OSIP Regression cases
     And I clicked the "Save" button in Networking Details Tab
     Then I verified all fields in networking details page
 
-  #NEWMOHIT 
-  @TC54963
+  
+  @TC54963 @regprathim @all
   Scenario: Verify Edit functionality for PON Collector Topology
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -357,7 +351,7 @@ Feature: OSIP Regression cases
     And I clicked the "Save" button in "Topology" Detail Page
     Then I verified all fields in topology details page
 
-  @TC54965
+  @TC54965 @regprathim @all
   Scenario: Verify correct Data displayed in Related tab for PON Collector Topology
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -370,19 +364,17 @@ Feature: OSIP Regression cases
     And In the 360 view I click on the "Devices" tab
     Then I verified correct Data displayed in Devices tab
 
-  #Ankit
-  @TC39243
+  @TC39243 @regprathim @all
   Scenario: Verify Service Association section for the service typeMEFENNI
     Given I am in omnivue url
     When I log in as a "Admin" user
     And I clicked on "Create" tab
     And I go to "Inventory" type and select "Service"
     And I Search for the "TC39243" data from Search Tab
-    And I click on the Launch Create form button
-    #new
+    And I click on the Launch Create form button   
     Then I verify all The Fields depending on selected value from SPEC Code dropdown
 
-  @TC39225
+  @TC39225 @regprathim @all
   Scenario: Verify the Add Subscriber association button
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -390,11 +382,10 @@ Feature: OSIP Regression cases
     And I Search for the "TC39225" data from Search Tab
     And I click on search button for "Inventory"
     And I click on view icon in Search Result page
-    And In the 360 view I click on the "Subscribers" tab
-    #NEW
+    And In the 360 view I click on the "Subscribers" tab   
     And I verify Add subscriber Association button
 
-  @TC39223
+  @TC39223 @regprathim @all
   Scenario: Verify the Add Subscriber association button
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -402,14 +393,12 @@ Feature: OSIP Regression cases
     And I Search for the "TC39223" data from Search Tab
     And I click on search button for "Inventory"
     And I click on view icon in Search Result page
-    And I clicked the "Edit" button in "Link" Detail Page
-    #new
+    And I clicked the "Edit" button in "Link" Detail Page   
     Then I fill the field from "Tc39223searchlink"
-    And I clicked the "Save" button in "Link" Detail Page
-    #new
+    And I clicked the "Save" button in "Link" Detail Page    
     Then I validate the field which we had selected
 
-  @TC55672
+  @TC55672 @regprathim @all
   Scenario: Verify data displayed in the related tabs of generic topology
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -423,7 +412,7 @@ Feature: OSIP Regression cases
     And In the 360 view I click on the "Circuits" tab
     Then I verified "Circuits" Details page
 
-  @TC55318
+  @TC55318 @regprathim @all
   Scenario: Verify the Edit functionality of DSL OVC Service
     Given I am in omnivue url
     When I log in as a "Admin" user
@@ -431,13 +420,11 @@ Feature: OSIP Regression cases
     And I Search for the "TC55318" data from Search Tab
     And I click on search button for "Inventory"
     And I click on view icon in Search Result page
-    And I clicked the "Edit" button in "DSL OVC" Detail Page
-    #NEW
-    And I fill data from "OVServiceDetailsPage" and "TC55318-main"
-    #NEW
+    And I clicked the "Edit" button in "DSL OVC" Detail Page   
+    And I fill data from "OVServiceDetailsPage" and "TC55318-main"    
     Then I validate the updated service details
     
-   @TC55509
+   @TC55509 @regprathim @all
  		 Scenario: Verify the create functionality of GPON device type MDU
  		 Given I am in omnivue url
    	 When I log in as a "Admin" user
