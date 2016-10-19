@@ -5,6 +5,7 @@ import com.ctl.it.qa.omnivue.tools.pages.common.OVHomepage;
 import com.ctl.it.qa.omnivue.tools.steps.user.UserSteps;
 
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
 import net.thucydides.core.annotations.Steps;
 
 public class OVOrderStepDefinition {
@@ -24,7 +25,9 @@ public class OVOrderStepDefinition {
 	
 	@And("^I select \"([^\"]*)\" in Create Tab$")
 	public void createform(String type){
-		try {
+		
+		enduser.createtabselect(type);
+		/*try {
 		actvtnpage.ddl_createType.selectByVisibleText(type);
 		//actvtnpage.btn_create_subcform.click();
 		
@@ -32,8 +35,8 @@ public class OVOrderStepDefinition {
 			actvtnpage.btn_create.click();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+			e.printStackTrace();*/
+		//}
 		
 		//actvtnpage.ddl_createType.selectByVisibleText(type);
 	 }
@@ -50,6 +53,15 @@ public class OVOrderStepDefinition {
 		enduser.fill_order_fields(data);
 	}
 	
+	@Then("^I Click on the Create Button in Order Details page$")
+	public void I_Click_on_the_Create_Button_in_Order_Details_page() throws Exception {		
+		enduser.Createbutton_functionality();
+	}
+	
+	@And("^I click on \"([^\"]*)\" button in MLTO Search page$")
+	public void Edit_button_MLTOsearch(String action) throws Exception {		
+		enduser.action_button_MLTO_Search(action);
+	}
 	
 	//***********************************************************************************************************//
 	//																											 //
@@ -58,7 +70,10 @@ public class OVOrderStepDefinition {
 	//																											 //
 	//***********************************************************************************************************//
 	
-	
+	@Then("^I validate \"([^\"]*)\" attributes in Search page for \"([^\"]*)\"$")
+	public void Search_form_atrribute_validation(String str1,String str2) throws Exception {		
+		enduser.Searchform_attribute_validation(str1,str2);
+	}
 	
 	
 	
@@ -71,6 +86,11 @@ public class OVOrderStepDefinition {
 	//																											 //
 	//***********************************************************************************************************//
 	
+	
+	@Then("^I validate \"([^\"]*)\" attributes in create form for \"([^\"]*)\"$")
+	public void Create_form_atrribute_validation(String str1,String str2) throws Exception {		
+		enduser.Createform_attribute_validation(str1,str2);
+	}
 	
 	
 }

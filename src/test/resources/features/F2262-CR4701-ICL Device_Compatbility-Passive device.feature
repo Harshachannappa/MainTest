@@ -28,7 +28,7 @@ Feature: F2262-CR4701-US40860-CR4701-Enhance ICL Device_Compatbility table to ac
     And I clicked on "Search" tab
     And I searched for <Container>
     And I click on search button for "Inventory"
-    And I click on view icon of Search Result page
+    And I click on view icon in Search Result page
     And Validate attributes in "PASSIVE" Search page
     Then Validate the device name in search page
     

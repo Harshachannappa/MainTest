@@ -7,7 +7,7 @@ Feature: Omnivue Order Sanity Check
     And I clicked on "Search" tab
     And I searched for <Container>
     And I click on search button for "Orders"
-    Then I click on view icon of Search Result page
+    Then I click on view icon in Search Result page
         
     Examples: 
     |Container											|

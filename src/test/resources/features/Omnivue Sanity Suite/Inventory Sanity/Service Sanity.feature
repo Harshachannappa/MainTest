@@ -1,17 +1,26 @@
 Feature: Omnivue Service Sanity Check
 
- @Sanity
-  Scenario Outline: OV-Validating Search Services based on Service types
-    Given I am in omnivue url
-    When I log in as a "Admin" user   
-    And I clicked on "Search" tab
-    And I searched for <Container>
+    
+  @Sanity @Test54
+  Scenario Outline: Search & Launch Services
+    Given I am logged in as a "ValidAdmin" user in Omnivue   
+    When I clicked on "Search" tab
+    And I Search "Inventory" in Search Tab											
+    And I searched for "Service" with <Service Type> Service Type
     And I click on search button for "Inventory"
-    Then I click on view icon of Search Result page
-        
-    Examples: 
-    |Container							|
-    |DSL OVC-Sanity search	|
-    |HSI-Sanity search			|
-    |MEF EVC-Sanity search	|
-    |MEF ENNI-Sanity search	|
+    Then I click on view icon in Search Result page
+    
+   
+Examples: 
+|Service Type 	|
+|DSL OVC        |      
+|HSI            |
+|MEF ENNI       |
+|MEF EVC        |
+|MEF OVC        |
+|MEF UNI        |      
+|Host Service 	|
+|IPTV           |
+|IPTV Unicast 	|
+|Probe UNI   		|        
+    

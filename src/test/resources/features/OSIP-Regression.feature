@@ -9,7 +9,7 @@ Feature: OSIP Regression cases
     And I clicked on "Search" tab
     And I Search for the "TC44383-Location" data from Search Tab
     And I click on search button for "Inventory"
-    And I click on view icon of Search Result page
+    And I click on view icon in Search Result page
     And I verified view page and clicked on "Contacts" tab
     Then I validate Add contact button in contacts tab
     
@@ -45,7 +45,7 @@ Feature: OSIP Regression cases
     #And I searched for "QOS Template"
     And I click on search button for "Inventory"
     #And I clicked on search button for "Inventory"
-    And I click on view icon of Search Result page
+    And I click on view icon in Search Result page
     And I should validate QOS template table
     And I click on "Edit"
     And I Update values of "QOS Template table"
@@ -62,7 +62,7 @@ Feature: OSIP Regression cases
     #And I searched for "QOS Template"
     And I click on search button for "Inventory"
     #And I clicked on search button for "Inventory"
-    And I click on view icon of Search Result page
+    And I click on view icon in Search Result page
     And I should validate QOS template table
     And I click on "Edit"
     And I Update values of "Invalid-QOS Template table"
@@ -78,7 +78,7 @@ Feature: OSIP Regression cases
 	When I clicked on "Search" tab
 	 And I Search for the "Search Service" data from Search Tab 
     And I click on search button for "Inventory"
-    And I click on view icon of Search Result page
+    And I click on view icon in Search Result page
     And In the 360 view I click on the "Activations" tab
     #And I verified view page and clicked on "Activations" tab
     And I clicked on expand icon of Related tab "Activations" page
@@ -155,7 +155,7 @@ Feature: OSIP Regression cases
     And I clicked on "Search" tab
     And I Search for the "BAM logs for IPTV Service" data from Search Tab
     And I click on search button for "Inventory"
-    And I click on view icon of Search Result page
+    And I click on view icon in Search Result page
     And I verified view page and clicked on "Devices" tab
     Then I should see the start and end devices
 
@@ -166,7 +166,7 @@ Feature: OSIP Regression cases
     And I clicked on "Search" tab
     And I Search for the "QOS Template" data from Search Tab
     And I click on search button for "Inventory"
-    And I click on view icon of Search Result page
+    And I click on view icon in Search Result page
     Then I should be in the "QOS Template" list view page
     
       @TC55531
@@ -244,7 +244,7 @@ Feature: OSIP Regression cases
     And I clicked on "Search" tab
     And I Search for the "TC39221" data from Search Tab
     And I click on search button for "Inventory"
-    And I click on view icon of Search Result page
+    And I click on view icon in Search Result page
     And In the 360 view I click on the "Subscribers" tab
     And I click on "Add Subscribers"
     Then I verify subscriber lookup page
@@ -256,7 +256,7 @@ Feature: OSIP Regression cases
     And I clicked on "Search" tab
     And I Search for the "TC39263" data from Search Tab
     And I click on search button for "Orders"
-    And I click on view icon of Search Result page
+    And I click on view icon in Search Result page
     And In the 360 view I click on the "BAM Report" tab
     Then I should see BAM event logs displayed.
 
@@ -300,7 +300,7 @@ Feature: OSIP Regression cases
     And I clicked on "Search" tab
     And I Search for the "TC55671-Search" data from Search Tab
     And I click on search button for "Inventory"
-    And I click on view icon of Search Result page
+    And I click on view icon in Search Result page
     And In the 360 view I click on the "Tasks" tab
     Then I verified "Tasks" Details page
     And In the 360 view I click on the "Locations" tab
@@ -315,7 +315,7 @@ Feature: OSIP Regression cases
     And I clicked on "Search" tab
     And I Search for the "TC55673-Search" data from Search Tab
     And I click on search button for "Inventory"
-    And I click on view icon of Search Result page
+    And I click on view icon in Search Result page
     And In the 360 view I click on the "Locations" tab
     Then I verified "Locations" Details page
     And In the 360 view I click on the "Circuits" tab
@@ -351,7 +351,7 @@ Feature: OSIP Regression cases
     And I clicked on "Search" tab
     And I Search for the "TC54963-Search" data from Search Tab
     And I click on search button for "Inventory"
-    And I click on view icon of Search Result page
+    And I click on view icon in Search Result page
     And I clicked the "Edit" button in "Topology" Detail Page
     And I edit the enabled fields with "TC55963-TD" data
     And I clicked the "Save" button in "Topology" Detail Page
@@ -366,7 +366,7 @@ Feature: OSIP Regression cases
     And I verified "Inventory" from the Search type dropdown
     And I verified "Topology" from the Inventory type dropdown
     And I click on search button for "Inventory"
-    And I click on view icon of Search Result page
+    And I click on view icon in Search Result page
     And In the 360 view I click on the "Devices" tab
     Then I verified correct Data displayed in Devices tab
 
@@ -389,7 +389,7 @@ Feature: OSIP Regression cases
     And I clicked on "Search" tab
     And I Search for the "TC39225" data from Search Tab
     And I click on search button for "Inventory"
-    And I click on view icon of Search Result page
+    And I click on view icon in Search Result page
     And In the 360 view I click on the "Subscribers" tab
     #NEW
     And I verify Add subscriber Association button
@@ -401,7 +401,7 @@ Feature: OSIP Regression cases
     And I clicked on "Search" tab
     And I Search for the "TC39223" data from Search Tab
     And I click on search button for "Inventory"
-    And I click on view icon of Search Result page
+    And I click on view icon in Search Result page
     And I clicked the "Edit" button in "Link" Detail Page
     #new
     Then I fill the field from "Tc39223searchlink"
@@ -416,7 +416,7 @@ Feature: OSIP Regression cases
     And I clicked on "Search" tab
     And I Search for the "TC55672" data from Search Tab
     And I click on search button for "Inventory"
-    And I click on view icon of Search Result page
+    And I click on view icon in Search Result page
     Then I verified "Devices" Details page
     And In the 360 view I click on the "Locations" tab
     Then I verified "Locations" Details page
@@ -430,7 +430,7 @@ Feature: OSIP Regression cases
     And I clicked on "Search" tab
     And I Search for the "TC55318" data from Search Tab
     And I click on search button for "Inventory"
-    And I click on view icon of Search Result page
+    And I click on view icon in Search Result page
     And I clicked the "Edit" button in "DSL OVC" Detail Page
     #NEW
     And I fill data from "OVServiceDetailsPage" and "TC55318-main"

@@ -100,7 +100,7 @@ public class OVValidationStepDefinition {
 		enduser.device_create_msg();
 	}
 	
-	@And("^I click on view icon of Search Result page$")  // Click on the View button in Search Result Page
+	@And("^I click on view icon in Search Result page$")  // Click on the View button in Search Result Page
 	public void i_clicked_on_view_icon_of_search_result_page() throws Exception {
 		Thread.sleep(10000);
 		enduser.select_viewBtn();
