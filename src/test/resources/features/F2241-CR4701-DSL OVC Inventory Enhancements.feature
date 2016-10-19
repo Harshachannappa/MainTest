@@ -58,7 +58,8 @@ Scenario: Validate OLT Devices with No service
     And I verified view page and clicked on "Services" tab
     Then validate the Service Tab
 
-#OLT-Test1-APPKFLFOH01-010101.01C
+#OLT-Test1-TESTYYYY01G-CA712-ONT
+
 #OLT-Test3-
 
     

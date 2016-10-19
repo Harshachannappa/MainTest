@@ -26,7 +26,7 @@ Feature: CR4701 GPON Market Launch Test Orders (MLTO) JulyUS65043
     Then I Click on the Create Button in Order Details page
     
     
-    
+#####################################################################################################################    
     #US60114--CR4701 GPON MLTO does not require V and H Coordinates
     
     @US60114 @TC81783 @all
@@ -62,7 +62,7 @@ Feature: CR4701 GPON Market Launch Test Orders (MLTO) JulyUS65043
    
    #pending
    @US60114 @TC81783 
-    Scenario: OV-Validate V and H coordinates is not present in MLTO Edit form 
+    Scenario Outline: OV-Validate V and H coordinates is not present in MLTO Edit form 
     Given I am logged in as a "ValidAdmin" user in Omnivue
      Given I am logged in as a "ValidAdmin" user in Omnivue
     When I clicked on "Search" tab         
@@ -71,3 +71,20 @@ Feature: CR4701 GPON Market Launch Test Orders (MLTO) JulyUS65043
     And I click on view icon in Search Result page 
     And I click on "Edit" button in MLTO Search page   
    Then I validate "V and H coordinates" attributes in create form for "MLTO" 
+   
+   Examples: 
+    |Container								|
+    |HSI MLTO Order						|
+		|HSI+PRISM MLTO Order			|
+   
+   #####################################################################################################################    
+   
+   #US37700---Add HD Streams as MLTO Input in OV
+   
+   @TC83454 @TC83455 @TC83621 @TC83622 @Testred
+   Scenario: OV-Validate V and H coordinates is not present in create MLTO form 
+    Given I am logged in as a "ValidAdmin" user in Omnivue
+    When I clicked on "Create" tab
+    And I select "Orders" in Create Tab     
+   Then I validate "HD Streams" attributes in create form for "MLTO" 
+   

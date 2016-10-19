@@ -16,7 +16,7 @@ Feature: Omnivue Circuit Sanity Check
    |LAG												|
    |Optical Bearer						|
    |PON												|
-   |PW Unrouted (Path					|
+   |PW Unrouted (Path)				|
    |Topology Virtual Circuit	|
    |Transport Path						|
    |VLAN Segment							|
