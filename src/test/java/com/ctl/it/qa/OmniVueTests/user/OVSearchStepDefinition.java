@@ -36,7 +36,7 @@ public class OVSearchStepDefinition {
 						//Search Tab Items are Listed Down
 	/* ************************************************************************* */
 
-	@And("^I searched for ([^\"]*)$")			//Currently used by Order search & Passive Device Container 
+	@And("^I searched for \"([^\"]*)\"$")			//Currently used by Order search & Passive Device Container 
 	public void i_searched_for_device(String field) throws Exception {
 		System.out.println(field);
 		enduser.fill_fields(field);

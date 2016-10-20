@@ -14,7 +14,7 @@ import cucumber.api.CucumberOptions;
 
 @TestEnvironment(Environment.ITV1)
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features="src/test/resources/features", tags={"@TC86316"})
+@CucumberOptions(features="src/test/resources/features", tags={"@TC69718"})
 public class CukesTest {
 	
 	@BeforeClass

@@ -83,7 +83,7 @@ import cucumber.api.java.en.Then;
 		System.out.println("url value is" + url);
 		enduser.is_in_omnivue_login_page(url);
 		loginpage.shouldExist(loginpage);
-		enduser.logs_in_as_a("Admin");			//Need to configure the Usertype in XML---21/7/2016
+		enduser.logs_in_as_a(userType);			//Need to configure the Usertype in XML---21/7/2016
 	}
 	
 	//Moved to OSIPScreen

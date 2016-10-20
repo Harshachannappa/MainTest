@@ -75,7 +75,10 @@ public class OVOrderStepDefinition {
 		enduser.Searchform_attribute_validation(str1,str2);
 	}
 	
-	
+	@Then("^I validate \"([^\"]*)\" attributes in Edit form for \"([^\"]*)\"$")
+	public void Edit_form_atrribute_validation(String str1,String str2) throws Exception {		
+		enduser.Editform_attribute_validation(str1,str2);
+	}
 	
 	
 	
@@ -92,5 +95,9 @@ public class OVOrderStepDefinition {
 		enduser.Createform_attribute_validation(str1,str2);
 	}
 	
+	@Then("^I Validate \"([^\"]*)\" button in MLTO search page$")
+	public void mlto_button_validation(String btn) throws Exception {		
+		enduser.Orderbutton_validation(btn);
+	}
 	
 }

@@ -26,17 +26,17 @@ Feature: F2262-CR4701-US40860-CR4701-Enhance ICL Device_Compatbility table to ac
     Given I am in omnivue url
     When I log in as a "Admin" user   
     And I clicked on "Search" tab
-    And I searched for <Container>
+    And I searched for "<Passive Device types>"
     And I click on search button for "Inventory"
     And I click on view icon in Search Result page
     And Validate attributes in "PASSIVE" Search page
     Then Validate the device name in search page
     
     Examples: 
-    |Container|
-    |MST			|
-    |FDP			|
-    |Splitter	|
+    |Passive Device types	|
+    |MST									|
+    |FDP									|
+    |Splitter							|
     
     
     #Test-1 Data-MST-BLCYNVTSGDB-MST-28---Need to be created
