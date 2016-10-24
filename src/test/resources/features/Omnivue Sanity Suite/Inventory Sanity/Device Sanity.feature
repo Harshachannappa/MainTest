@@ -5,12 +5,12 @@ Feature: Omnivue Sanity Check Device
     Given I am in omnivue url
     When I log in as a "Admin" user   
     And I clicked on "Search" tab
-    And I searched for <Container>
+    And I searched for "<Device Type>"
     And I click on search button for "Inventory"
     Then I click on view icon in Search Result page
         
     Examples: 
-    |Container							|
+    |Device Type						|
     |GPON-Sanity search			|
     |Ethernet-Sanity search	|
     |Passive-Sanity search	|

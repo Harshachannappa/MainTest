@@ -69,6 +69,9 @@ public class OVSearchStepDefinition {
 	@And("^I clicked on Advance Search for \"([^\"]*)\"$")
 	public void i_clicked_on_Adcance_Search_for(String advanced_Search) throws Throwable {
 	   // enduser.click_searchBtn(advanced_Search);
+		if(advanced_Search.equals("Orders")){
+		actvtnpage.lnk_Advanced_Search.click();
+	}
 	}
 	
 	@And("^I Search order with DTN$")

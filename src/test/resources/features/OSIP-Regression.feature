@@ -1,18 +1,12 @@
 Feature: OSIP Regression cases
 
+ ###################################################################################
+   ##							Divya scripts																						######
+   ##																																						######
+   ##																																						######
+   ##																																						######
+   ###################################################################################
 
-  @TC44383  @OSIPRegression @all
-  Scenario: OSIP-360 View Location - Individual Address_Verify Related Tab - Contacts Add Contact Button
-    Given I am in omnivue url
-    When I log in as a "Admin" user
-    #When I goto Activation Page
-    And I clicked on "Search" tab
-    And I Search for the "TC44383-Location" data from Search Tab
-    And I click on search button for "Inventory"
-    And I click on view icon in Search Result page
-    And I verified view page and clicked on "Contacts" tab
-    Then I validate Add contact button in contacts tab
-    
     
      @TC39187   @OSIPRegression @all
   Scenario: OSIP-Verify the functionality of Create Button for create form -Subscriber
@@ -102,6 +96,171 @@ Feature: OSIP Regression cases
    And I click on Launch Create Form for "ServiveCreate"
    Then Validate apacheSolr for subscriber in create device service page
    
+ ###################################################################################
+   ##							Sanjay scripts																						######
+   ##																																						######
+   ##																																						######
+   ##																																						######
+   ###################################################################################
+   
+   @TC44383 @all
+  Scenario: OSIP-360 View Location - Individual Address_Verify Related Tab - Contacts Add Contact Button
+   Given I am logged in as a "ValidAdmin" user in Omnivue
+    When I clicked on "Search" tab
+    And I searched for "TC44383-Location"
+    And I click on search button for "Inventory"
+    And I click on view icon in Search Result page
+    And I verified view page and clicked on "Contacts" tab
+    Then I validate Add contact button in contacts tab
+  
+ 
+  @TC44385 @all
+  Scenario: Verify Migration of Create Activation Task functionality for MEF EVC Service
+    Given I am logged in as a "ValidAdmin" user in Omnivue
+    When I clicked on "Create" tab   
+    And I go to "Inventory" type and select "Service" 
+    And I Select "MEF EVC" for the drop down Service Type
+   And I click on Launch Create Form for "ServiveCreate"      
+    And I fill all the mandatory fields required in service create form with "MEF EVC-TC44385 data"
+    And I click on manual activation checkbox in service create form
+    And I click on Create button on Service page
+    Then Service should get created successfully
+    And Task should be generated and displayed in related tab Tasks
+ 
+
+  @TC44386 @all
+  Scenario: Verify Migration of Create Activation Task functionality for MEF OVC Service
+    Given I am logged in as a "ValidAdmin" user in Omnivue
+    When I clicked on "Create" tab 
+     And I go to "Inventory" type and select "Service" 
+    And I Select "MEF OVC" for the drop down Service Type
+   And I click on Launch Create Form for "ServiveCreate"
+     And I fill all the mandatory fields required in service create form with "MEF OVC-TC44385 data"
+     And I click on Create button on Service page
+    Then Service should get created successfully
+
+
+  @TC44387 @all
+  Scenario: Verify the create functionality of HOST Service
+   Given I am logged in as a "ValidAdmin" user in Omnivue
+    When I clicked on "Create" tab 
+    And I go to "Inventory" type and select "Service" 
+    And I Select "Host Service" for the drop down Service Type
+   And I click on Launch Create Form for "ServiveCreate"
+     And I fill all the mandatory fields required in service create form with "HOST Service-TC44387 data"
+      And I click on Create button on Service page
+    Then Service should get created successfully
+   
+
+  @TC54061 @all
+  Scenario: OSIP-Verify the functionality of create location button for Address Ranges
+    Given I am logged in as a "ValidAdmin" user in Omnivue
+    When I clicked on "Create" tab 
+    And I go to "Inventory" type and select "Location" 
+    And I Select "Address Range" in Location type drop down 
+     And I click on Launch Create Form for "Inventory"  
+     And I fill all the mandatory fields required in Location create form with "Address Range-TC54061 data"    
+   And I click on Create button on Location create page
+    Then Address Range should get created successfully 
+
+  @TC54062 @all
+  Scenario: OSIP-Verify error message is displayed when duplicate address range is created
+     Given I am logged in as a "ValidAdmin" user in Omnivue
+    When I clicked on "Create" tab 
+    And I go to "Inventory" type and select "Location" 
+    And I Select "Address Range" in Location type drop down 
+     And I click on Launch Create Form for "Inventory" 
+      And I fill all the mandatory fields required in Location create form with "Invalid Address Range-TC54062"    
+   And I click on Create button on Location create page   
+    Then Error message should be displayed on Location create form
+  
+
+  @TC54072 @all
+  Scenario: Verify user able to add address to a Range from Individual Location create form
+    Given I am logged in as a "ValidAdmin" user in Omnivue
+    When I clicked on "Create" tab 
+    And I go to "Inventory" type and select "Location" 
+    And I Select "Individual Location" in Location type drop down   
+    And I select "Add to Range" and search for "Address Range"
+    And I fill the "Primary Address-TC54072" details in location create form
+    And I select the Location Role in create form "Single" and "Central Office"
+    And I fill the "Secondary Address-TC54072" details in location create form
+    And I click on Create button in Individual Address page
+    Then Location should get created successfully
+   
+
+  @TC39276 @all
+  Scenario: Verify the functionality of Create Button when ICO is selected as NO
+    Given I am logged in as a "ValidAdmin" user in Omnivue
+    When I clicked on "Create" tab 
+    And I go to "Inventory" type and select "Location" 
+    And I Select "Individual Location" in Location type drop down 
+    And I fill the "Primary Address-TC39276" details in location create form   
+    And I select the Location Role in create form "Single" and "Remote Site"
+    And I fill the "Secondary Address-TC39276" details in location create form     
+    And I click on Create button in Individual Address page
+    Then Individual Location should get created successfully
+    
+
+  @TC54068 @all
+  Scenario: Verify the functionality of create location button using Add Individual address button
+    Given I am logged in as a "ValidAdmin" user in Omnivue
+    When I clicked on "Search" tab
+    And I go to "Inventory" type and select "Location"
+    And I clicked on Advance Search for "Orders"   
+    And I select Address Range radio button
+    And I search for an "TC54068-Address Range" in Advance search
+    And I click on view icon in Search Result page
+    And I click on Add Individual Address button from Address Range view page
+    And I fill the mandatory fields required for "TC54068-Individual Addresses"
+    And I click on Create button in Address Within Range page
+    Then AWR Location should get created successfully
+    
+
+  @TC54069
+  Scenario: Verify the functionality of create Ethernet Bearer Circuit
+    Given I am in omnivue url
+    When I log in as a "Admin" user
+    And I clicked on "Create" tab
+    And I go to "Inventory" create type and select "Ethernet Bearer Circuit" as the Circuit type
+    And I fill all mandatory fields required for "Ethernet Bearer" Create
+    And I select the "TC54069 Start Device" Start Device
+    And I fetch the Start Device ports
+    And I select the "TC54069 End Device" End Device
+    And I fetch the End Device ports
+    When I click on Create Circuit
+    Then Circuit should get created successfully
+    And Log out from OMNIVue
+
+  @TC55214
+  Scenario: Verify error message when user enter more than 8-characters in SWC CLLI
+    Given I am in omnivue url
+    When I log in as a "Admin" user
+    And I clicked on "Create" tab
+    And I go to "Inventory" create type and select "Individual Location"
+    And I enter the "TC55214 Primary Address" Primary Address details
+    And I select the Location Role in create form "Single" and "Central Office"
+    And I enter the "TC55214 Secondary Address" Secoundary Address details
+    When I click on Create button in Individual Address page
+    Then Error message should be displayed for SWC CLLI
+    And Log out from OMNIVue
+
+  @TCS1452
+  Scenario: Validate NID device creation
+    Given I am in omnivue url
+    When I log in as a "Admin" user
+    And I clicked on "Create" tab
+    And I go to "Inventory" create type and select "Device" as Inventory type
+    And I select the filter by option
+    And Select Role as "NID" with Device Type as "Alcatel-Lucent 7750 Service Router" with Device sub type as "Alcatel-Lucent 7750 SR-7"
+    #And I select filter by option in create form for Device "ETHERNET"
+    And I fill Location Address "TC96978-Address"
+    And I fill Subscriber Details "TCS1452 - Subscriber"
+    And I fill mandatory field of "TCS1452 - NID"
+    When I click on Create Device button
+    Then Device should get created successfully
+    And Log out from OMNIVue
+    
    
    ###################################################################################
    ##							Pratim Team scripts																						######

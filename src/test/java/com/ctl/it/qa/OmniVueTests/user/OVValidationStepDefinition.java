@@ -132,7 +132,7 @@ public class OVValidationStepDefinition {
 	@And("^I verified view page and clicked on \"([^\"]*)\" tab$") // Move to UserStep Definition  //Needs to be removed--19/7/2016
 	public void i_verified_view_page_of_device_and_clicked_on_services_tab(String tab) throws Exception {
 		//enduser.verify_deviceSearchPage();
-		System.out.println("entered the first stage"+tab);
+		//System.out.println("entered the first stage"+tab);
 		enduser.click_servicesTab(tab);
 		
 	}

@@ -95,9 +95,9 @@ public class OVOrderStepDefinition {
 		enduser.Createform_attribute_validation(str1,str2);
 	}
 	
-	@Then("^I Validate \"([^\"]*)\" button in MLTO search page$")
-	public void mlto_button_validation(String btn) throws Exception {		
-		enduser.Orderbutton_validation(btn);
+	@Then("^I Validate \"([^\"]*)\" button in MLTO search page which should be \"([^\"]*)\"$")
+	public void mlto_button_validation(String btn, String state) throws Exception {		
+		enduser.Orderbutton_validation(btn,state);
 	}
 	
 }
