@@ -14,4 +14,9 @@ Given I am logged in as a "ValidAdmin" user in Omnivue
      And I searched for "GPON-OLT Devie-TC75816"
      And I click on search button for "Inventory"
     And I click on view icon in Search Result page
-      And I click on "Edit" button in Search page
+       And I clicked the "Edit" button in Device Detail Page
+       Then I validate "Max Subscriber Bandwidth" attributes in Edit form for "OLT Device"
+       And I clicked the "Save" button in Device Detail Page
+       
+       
+       # Fields In OLT Device--Provision Status* , Functional Status,Network Element Note,Restricted Status Notes,Device CLLI,Device Name,Device Full Name*,Network Roles*,Alias1, ,Relay Rack Shelf*,Alias2,Device Type,Device Sub Type,Device ID,Device HECIG,Vendor Name,Vendor Part Number,Part Type,Manfacturer Part Number,IPV4 Mgm Router ID,IPV4 Console 1,IPV4 Console 2,IPV4 Selection,Can Auto Translate,Is Diverse,Shared Flag*,Management VLAN,Subscriber Id,Subscriber Type,Subscriber Name*,Affiliate Owner*,Location Name,MCO,Network Node #,Max Subscriber Bandwidth*,EMS/CMS Node ID,1 Gbps Indicator*,,Stack Ring Sequence #,Stack Ring Shelf Identifier,NOSA Certification*,

@@ -43,16 +43,16 @@ Given I am logged in as a "ValidAdmin" user in Omnivue
       #topology Test3-TXNTW7223
     #Topology Test1-CANTW7920
     
-@Sanity @all
-Scenario: Omnivue sanity check for Creating Ethernet device
-Given I am logged in as a "ValidAdmin" user in Omnivue
-	When I clicked on "Create" tab    
-    And I go to "Inventory" type and select "Device"
-    And I Select "Technology" as Filter By value
-     And I validated "ETHERNET" technology and device type
-    And Select the technology as "ETHERNET" with Device Type as "Calix C Series" with Sub-Type as "Calix C7"
-    And Select subscriber & Equipment role with "US51414-TC37705" data
-    Then I fill the mandatory fields with "US51414-TC37705" data
+#@Sanity @all @Check
+#Scenario: Omnivue sanity check for Creating Ethernet device
+#Given I am logged in as a "ValidAdmin" user in Omnivue
+	#When I clicked on "Create" tab    
+ #  And I go to "Inventory" type and select "Device"
+    #And I Select "Technology" as Filter By value
+   #And I validated "ETHERNET" technology and device type
+ #And Select the technology as "ETHERNET" with Device Type as "Calix C Series" with Sub-Type as "Calix C7"
+   # And Select subscriber & Equipment role with "US51414-TC37705" data
+ #Then I fill the mandatory fields with "US51414-TC37705" data
     
       #topology Test3-TXNTW7223
     #Topology Test1-CANTW7920
