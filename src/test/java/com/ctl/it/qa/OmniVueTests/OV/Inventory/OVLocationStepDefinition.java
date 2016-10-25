@@ -354,5 +354,17 @@ Thread.sleep(5000);
 		
 		
 	}
+	
+	@Then("^Error message should be displayed for SWC CLLI$")
+	public void Error_message_should_be_displayed_for_SWC_CLLI () throws Throwable {
+		
+		if (createlocationpage.lbl_SWC_CLLI_Error_messge.isDisplayed()) {
+			
+			System.out.println("Message displayed on UI : " + createlocationpage.lbl_SWC_CLLI_Error_messge.getText());
+		
+		}
+	
+	}
+	
 			
 }

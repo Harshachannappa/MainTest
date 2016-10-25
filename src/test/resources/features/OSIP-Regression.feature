@@ -195,6 +195,7 @@ Feature: OSIP Regression cases
     When I clicked on "Create" tab 
     And I go to "Inventory" type and select "Location" 
     And I Select "Individual Location" in Location type drop down 
+    And I click on Launch Create Form for "Inventory"
     And I fill the "Primary Address-TC39276" details in location create form   
     And I select the Location Role in create form "Single" and "Remote Site"
     And I fill the "Secondary Address-TC39276" details in location create form     
@@ -217,49 +218,45 @@ Feature: OSIP Regression cases
     Then AWR Location should get created successfully
     
 
-  @TC54069
+  @TC54069 @all
   Scenario: Verify the functionality of create Ethernet Bearer Circuit
-    Given I am in omnivue url
-    When I log in as a "Admin" user
-    And I clicked on "Create" tab
-    And I go to "Inventory" create type and select "Ethernet Bearer Circuit" as the Circuit type
-    And I fill all mandatory fields required for "Ethernet Bearer" Create
+    Given I am logged in as a "ValidAdmin" user in Omnivue
+    When I clicked on "Create" tab
+    And I go to "Inventory" type and select "Circuit"
+    And I select "Ethernet Bearer" as the Circuit type in Create Tab
+  	And I click on Launch Create Form for "Inventory"
+    And I fill all mandatory fields required with "Ethernet Bearer-TC54069" in Circuit create form
     And I select the "TC54069 Start Device" Start Device
     And I fetch the Start Device ports
     And I select the "TC54069 End Device" End Device
     And I fetch the End Device ports
-    When I click on Create Circuit
+    And I click on Create Circuit create form
     Then Circuit should get created successfully
-    And Log out from OMNIVue
+  
 
-  @TC55214
+  @TC55214 @all
   Scenario: Verify error message when user enter more than 8-characters in SWC CLLI
-    Given I am in omnivue url
-    When I log in as a "Admin" user
-    And I clicked on "Create" tab
-    And I go to "Inventory" create type and select "Individual Location"
-    And I enter the "TC55214 Primary Address" Primary Address details
+   Given I am logged in as a "ValidAdmin" user in Omnivue
+    When I clicked on "Create" tab 
+    And I go to "Inventory" type and select "Location" 
+    And I Select "Individual Location" in Location type drop down 
+    And I click on Launch Create Form for "Inventory"
+     And I fill the "Primary Address-TC55214" details in location create form   
     And I select the Location Role in create form "Single" and "Central Office"
-    And I enter the "TC55214 Secondary Address" Secoundary Address details
-    When I click on Create button in Individual Address page
+    And I fill the "Secondary Address-TC55214" details in location create form     
+    And I click on Create button in Individual Address page
     Then Error message should be displayed for SWC CLLI
-    And Log out from OMNIVue
 
-  @TCS1452
+  @TCS1452 @all
   Scenario: Validate NID device creation
-    Given I am in omnivue url
-    When I log in as a "Admin" user
-    And I clicked on "Create" tab
-    And I go to "Inventory" create type and select "Device" as Inventory type
-    And I select the filter by option
-    And Select Role as "NID" with Device Type as "Alcatel-Lucent 7750 Service Router" with Device sub type as "Alcatel-Lucent 7750 SR-7"
-    #And I select filter by option in create form for Device "ETHERNET"
-    And I fill Location Address "TC96978-Address"
-    And I fill Subscriber Details "TCS1452 - Subscriber"
-    And I fill mandatory field of "TCS1452 - NID"
-    When I click on Create Device button
-    Then Device should get created successfully
-    And Log out from OMNIVue
+    Given I am logged in as a "ValidAdmin" user in Omnivue
+    When I clicked on "Create" tab 
+    And I go to "Inventory" type and select "Device"   
+    And I Select "Role" as Filter By value
+    And Select the Role as "NID" with Device Type as "Alcatel-Lucent 7750 Service Router" with Sub-Type as "Alcatel-Lucent 7750 SR-7"
+     And I click on Launch Create Form for "Inventory"
+     Then I fill the mandatory fields with "TCS1452" data 
+  
     
    
    ###################################################################################
