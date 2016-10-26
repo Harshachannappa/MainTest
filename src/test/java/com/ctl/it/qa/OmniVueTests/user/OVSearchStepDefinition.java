@@ -61,7 +61,7 @@ public class OVSearchStepDefinition {
 	public void i_clicked_on_INV_search_button(String button) throws Exception 
 	{
 		enduser.click_searchBtn(button);
-		Thread.sleep(10000);
+		Thread.sleep(15000);
 		//System.out.println("First stage");
 	}
 	
