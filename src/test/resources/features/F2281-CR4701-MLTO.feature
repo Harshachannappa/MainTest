@@ -1,6 +1,7 @@
 Feature: CR4701 GPON Market Launch Test Orders (MLTO) JulyUS65043
 
-As an inventory user I need the ability to create an order in the native provisioning system, which mimics order flow from the order entry system, so that I can test the infrastructure build, activation, and dispatch flow and release the addresses and equipment associated with a new engineering build
+As an inventory user I need the ability to create an order in the native provisioning system, which mimics order flow from the order entry system, so that I can test the infrastructure build, 
+activation, and dispatch flow and release the addresses and equipment associated with a new engineering build
 
 #US65043--CR4701 GPON MLTO uses DSP provisioning flow for MLTO and HSI (HSI+PRISM)
 #US84417--MLTO Create/View Changes
