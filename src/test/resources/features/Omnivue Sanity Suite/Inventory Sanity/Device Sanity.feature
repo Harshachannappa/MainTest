@@ -17,28 +17,28 @@ Feature: Omnivue Sanity Check Device
     
 	
 	
-@Sanity @all
-Scenario: Omnivue sanity check for Creating GPON device
-Given I am logged in as a "ValidAdmin" user in Omnivue
-	When I clicked on "Create" tab   
-    And I go to "Inventory" type and select "Device"
-    And I Select "Technology" as Filter By value
-    And I validated "GPON" technology and device type
-    And Select the technology as "GPON" with Device Type as "ADTRAN Total Access 5000" with Sub-Type as "ADTRAN Total Access 5000 19 Inch Chassis"       
-    Then I fill the mandatory fields with "US51414-TC37479" data
+#@Sanity @all
+#Scenario: Omnivue sanity check for Creating GPON device
+#Given I am logged in as a "ValidAdmin" user in Omnivue
+	#When I clicked on "Create" tab   
+  #  And I go to "Inventory" type and select "Device"
+  #  And I Select "Technology" as Filter By value
+   # And I validated "GPON" technology and device type
+ #   And Select the technology as "GPON" with Device Type as "ADTRAN Total Access 5000" with Sub-Type as "ADTRAN Total Access 5000 19 Inch Chassis"       
+ #   Then I fill the mandatory fields with "US51414-TC37479" data
     
       #topology Test3-TXNTW7223
     #Topology Test1-CANTW7920
 
-@Sanity @all
-Scenario: Omnivue sanity check for Creating Passive device
-Given I am logged in as a "ValidAdmin" user in Omnivue
-	When I clicked on "Create" tab    
-    And I go to "Inventory" type and select "Device"
-    And I Select "Technology" as Filter By value
-    And I validated "PASSIVE" technology and device type
-    And Select the technology as "PASSIVE" with Device Type as "Fiber Distribution Hub" with Sub-Type as "Generic FDH 144"
-    Then I fill the mandatory fields with "US51414-TC37684" data
+#@Sanity @all
+#Scenario: Omnivue sanity check for Creating Passive device
+#Given I am logged in as a "ValidAdmin" user in Omnivue
+	#When I clicked on "Create" tab    
+ #   And I go to "Inventory" type and select "Device"
+   # And I Select "Technology" as Filter By value
+  #  And I validated "PASSIVE" technology and device type
+  #  And Select the technology as "PASSIVE" with Device Type as "Fiber Distribution Hub" with Sub-Type as "Generic FDH 144"
+ #   Then I fill the mandatory fields with "US51414-TC37684" data
     
       #topology Test3-TXNTW7223
     #Topology Test1-CANTW7920
