@@ -600,3 +600,90 @@ Feature: OSIP Regression cases
  		 And I edit the enabled fields with "TC55484-ND" data 		 
  		 And I clicked the "Save" button in Networking Details Tab  		 
  		 Then I verified all fields in networking details page	
+ 		 
+ 		 
+ 		 
+ 		 #######################################################################################################
+ 		 ###			Week 5 Scripts -Pratim Team																		#####
+ 		 
+ 		 
+ 		 
+ 		 @TC39261 @Reqwe
+  Scenario: Verify Alt Eqpt Build order number search is retrieving all the details or not
+    Given I am in omnivue url
+    When I log in as a "Admin" user
+    And I clicked on "Create" tab
+    And I go to "Network Build" type and select "Alternate Equipment Build"
+    And I select "Alt Equipment Build Type" as "CE" in Search Tab    
+    And I click on Launch Create Form for "NetworkBuild"
+    And I validate "All" attributes in create form for "Alternate Equipment Build"
+    And I enter the order number with "TC39261" data and click
+
+  @TC39262
+  Scenario: Verify the functionality of Add Device button of Alt Equipment Build
+    Given I am in omnivue url
+    When I log in as a "Admin" user
+    And I clicked on "Create" tab
+    And I go to "Network Build" type and select "Alternate Equipment Build"
+    And I entered details for the "TC39262-Alt. Equipment Build Type"
+    And I click on Launch Create Form for "NetworkCreate"
+    And I click on "Device-1 CLLI" button under build components
+    And I fill the mandatory fields for "TC39262-Device1FORCLLI" and "TC39262-Device1" and "TC39262-Device1FORSubscriber"
+    And I click on validate device button
+    And I click on "Device-2 CLLI" button under build components
+    And I fill the mandatory fields for "TC39262-Device2FORCLLI" and "TC39262-Device2" and "TC39262-Device2FORSubscriber"
+    And I click on validate device button
+
+  #ankit
+  @TC55726
+  Scenario Outline: verify Quick search fields functionality of Subscriber
+    Given I am in omnivue url
+    When I log in as a "Admin" user
+    And I clicked on "Search" tab
+    And I Search for the <TestData1> data from Search Tab
+    And I click on search button for "Inventory"
+    And I click on view icon of Search Result page
+    Then I verify the suscriber view
+
+    Examples: 
+      | TestData1 |
+      | TC55726   |
+      | TC55726A  |
+      | TC55726B  |
+      | TC55726C  |
+
+  @TC39199
+  Scenario: Verify Audit Log of Create for Contact
+    Given I am in omnivue url
+    When I log in as a "Admin" user
+    And I clicked on "Create" tab
+    And I go to "Inventory" type and select "Contact"
+    And I click on the Launch Create form button
+    And I fill all the manadtory field at ov contact search deatails page
+    And I select all the checkbox
+    And I click on Create button
+    And I click on AuditLog tab
+ 		 
+ 	 #This TC having issue and incomplete,issue is while creating DSL OVC service Task is not created
+  @TC55325 @regprathim
+  Scenario: DSL OVC Service Verify the Create button functionality of DSL OVC service with AutoActivation checkbox selected
+    Given I am in omnivue url
+    When I log in as a "Admin" user
+    And I clicked on "Create" tab
+    And I go to "Inventory" type and select "Service"
+    And I verified "Inventory" from the Create Type dropdown
+    And I verified "Service" from the Inventory Type dropdown
+    And I Select "DSL OVC" for the drop down Service Type
+    And I click on Launch Create Form for "ServiveCreate"
+
+  #    And I fill the necessary fields with "DSL OVC Service Data" data in Create Service Page
+  @TC39198 @regprathim
+  Scenario: Verify the appropriate validation message if Contact Information is selected but not 24X7
+    Given I am in omnivue url
+    When I log in as a "Admin" user
+    And I clicked on "Create" tab
+    And I go to "Inventory" type and select "Contact"
+    And I click on the Launch Create form button
+    And I fill all the manadtory field at ov contact search deatails page
+    And I click on Create button
+    Then I verified the alert message

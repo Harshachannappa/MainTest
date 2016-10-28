@@ -1,6 +1,6 @@
 Feature: Omnivue Link Sanity Check
 
- @Sanity @all @test56
+ @Sanity @all
   Scenario: Verify Fiber Link 360 view is displayed
     Given I am in omnivue url
     When I log in as a "Admin" user
